@@ -9,3 +9,5 @@ langchain
 langchain-openai
 openai
 tiktoken
+open-clip-torch
+
