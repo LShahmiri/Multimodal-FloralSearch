@@ -109,7 +109,7 @@ image_paths = load_flower_dataset()
 # ------------------------------------------------------------
 # Setup ChromaDB
 # ------------------------------------------------------------
-chroma_client = chromadb.PersistentClient(path="./data/flower.db")
+chroma_client = chromadb.PersistentClient(path="./data/flower_v2.db")
 
 image_loader = ImageLoader()
 embedding_fn = OpenCLIPEmbeddingFunction()
