@@ -2,9 +2,11 @@ streamlit
 datasets
 pillow
 python-dotenv
+
+numpy==1.26.4
 chromadb==0.5.0
+
 langchain
 langchain-openai
 openai
 tiktoken
-numpy
