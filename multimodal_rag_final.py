@@ -7,7 +7,7 @@ import warnings
 from dotenv import load_dotenv
 
 import chromadb
-from chromadb.utils.embedding_functions import OpenCLIPEmbeddingFunction
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 from chromadb.utils.data_loaders import ImageLoader
 
 from langchain_openai import ChatOpenAI
@@ -112,7 +112,7 @@ image_paths = load_flower_dataset()
 chroma_client = chromadb.PersistentClient(path="./data/flower.db")
 
 image_loader = ImageLoader()
-embedding_fn = OpenCLIPEmbeddingFunction()
+embedding_fn = SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
 
 collection = chroma_client.get_or_create_collection(
     name="flowers",
